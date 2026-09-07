@@ -1,0 +1,14 @@
+@import url("login.css");
+.auth-panel {
+  max-width: 580px;
+}
+.two-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 560px) {
+  .two-fields {
+    grid-template-columns: 1fr;
+  }
+}

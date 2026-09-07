@@ -1,0 +1,119 @@
+@import url("index.css");
+.auth-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 6% 9%;
+  gap: 10%;
+  background: #f3eee5;
+}
+.auth-layout > .brand {
+  position: absolute;
+  top: 35px;
+  left: 9%;
+}
+.auth-panel {
+  max-width: 470px;
+  align-self: center;
+}
+.auth-panel h1 {
+  font-size: 55px;
+  margin-bottom: 16px;
+}
+.auth-intro {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+.form-card {
+  background: #fff;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 13px;
+  margin-top: 7px;
+  outline: 0;
+  color: var(--ink);
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--coral);
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin: 5px 0 22px;
+}
+.form-row a,
+.auth-switch a {
+  color: var(--coral);
+  font-weight: 700;
+}
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+.check-label input {
+  width: auto;
+  margin: 0;
+}
+.form-message {
+  font-size: 12px;
+  color: #4c7b5b;
+  margin: 12px 0 0;
+}
+.auth-switch {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 22px 0 0;
+}
+.auth-art {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 500px;
+  background: #dce8de;
+  color: #47625b;
+  text-align: center;
+}
+.auth-art span {
+  font-size: 140px;
+}
+.auth-art p {
+  font: italic 25px "Playfair Display";
+}
+@media (max-width: 700px) {
+  .auth-layout {
+    display: block;
+    padding: 100px 7% 45px;
+  }
+  .auth-layout > .brand {
+    top: 28px;
+    left: 7%;
+  }
+  .auth-art {
+    display: none;
+  }
+  .auth-panel h1 {
+    font-size: 44px;
+  }
+}

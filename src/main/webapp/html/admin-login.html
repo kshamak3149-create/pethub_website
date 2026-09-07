@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin sign in | PetHub</title>
+    <link rel="stylesheet" href="../css/admin-login.css" />
+  </head>
+  <body>
+    <main class="admin-auth">
+      <div class="admin-brand">
+        <span class="brand-mark">P</span>
+        <div><strong>PetHub</strong><small>Rescue operations</small></div>
+      </div>
+      <div class="admin-card">
+        <p class="eyebrow">Team access</p>
+        <h1>Welcome to<br /><em>the back office.</em></h1>
+        <p>
+          Sign in to manage pets, requests, and the people who care about them.
+        </p>
+        <form id="admin-login-form">
+          <label>Admin email<input type="email" name="email" required /></label
+          ><label
+            >Password<input type="password" name="password" required /></label
+          ><button class="button button-dark" type="submit">
+            Open dashboard <span>&rarr;</span>
+          </button>
+          <p class="form-message" id="form-message"></p>
+        </form>
+        <a class="return-link" href="index.html">&larr; Return to PetHub</a>
+      </div>
+      <div class="admin-quote">
+        Care is the beginning of every good story.<span
+          >PetHub team console</span
+        >
+      </div>
+    </main>
+    <script src="../js/admin-login.js"></script>
+  </body>
+</html>

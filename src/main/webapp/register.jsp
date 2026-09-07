@@ -1,0 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%><% String contextPath = request.getContextPath(); %>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create account | PetHub</title>
+    <link rel="stylesheet" href="<%= contextPath %>/css/register.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <a class="brand" href="<%= contextPath %>/index.jsp"
+        ><span class="brand-mark">P</span
+        ><span>Pet<span class="brand-accent">Hub</span></span></a
+      >
+      <section class="auth-panel">
+        <p class="eyebrow">Start your story</p>
+        <h1>Make room for<br /><em>something good.</em></h1>
+        <p class="auth-intro">
+          Create your PetHub account and find a companion who fits your life.
+        </p>
+        <form
+          id="register-form"
+          class="form-card"
+          method="post"
+          action="<%= contextPath %>/users"
+        >
+          <input type="hidden" name="action" value="add" />
+          <div class="two-fields">
+            <label>Full name<input type="text" name="name" required /></label
+            ><label
+              >Phone number<input type="tel" name="phone" required
+            /></label>
+          </div>
+          <label
+            >Email address<input type="email" name="email" required /></label
+          ><label
+            >Password<input
+              type="password"
+              name="password"
+              required /></label
+          ><label
+            >Home address<textarea
+              name="address"
+              rows="3"
+              required
+            ></textarea></label
+          ><label class="check-label"
+            ><input type="checkbox" required /> I agree to the PetHub
+            terms</label
+          ><button class="button button-primary" type="submit">
+            Create account <span>&rarr;</span>
+          </button>
+          <p class="form-message" id="form-message"><% String regMsg = (String) request.getAttribute("success"); if (regMsg != null) { out.print(regMsg); } %></p>
+          <p class="auth-switch">
+            Already have an account?
+            <a href="<%= contextPath %>/login.jsp">Sign in</a>
+          </p>
+        </form>
+      </section>
+      <div class="auth-art">
+        <span>&#10084;</span>
+        <p>One thoughtful step<br />can change two lives.</p>
+      </div>
+    </main>
+    <script src="<%= contextPath %>/js/register.js"></script>
+  </body>
+</html>

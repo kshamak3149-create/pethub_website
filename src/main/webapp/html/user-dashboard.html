@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My dashboard | PetHub</title>
+    <link rel="stylesheet" href="../css/user-dashboard.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">P</span
+        ><span>Pet<span class="brand-accent">Hub</span></span></a
+      >
+      <nav class="site-nav">
+        <a href="pets.html">Find a pet</a
+        ><a class="active" href="user-dashboard.html">My dashboard</a
+        ><a class="nav-button" href="index.html">Sign out</a>
+      </nav>
+    </header>
+    <main class="dashboard-wrap">
+      <div class="welcome-row">
+        <div>
+          <p class="eyebrow">Your PetHub space</p>
+          <h1>Good morning, <em>Alex.</em></h1>
+          <p>Here is where your adoption story is taking shape.</p>
+        </div>
+        <div class="profile-chip">
+          <span>AS</span>
+          <div>
+            <strong>Alex Smith</strong><small>Member since today</small>
+          </div>
+        </div>
+      </div>
+      <section class="stat-grid">
+        <div>
+          <span>Open requests</span><strong>02</strong
+          ><small>being reviewed</small>
+        </div>
+        <div>
+          <span>Saved pets</span><strong>05</strong
+          ><small>waiting for you</small>
+        </div>
+        <div>
+          <span>Profile complete</span><strong>80%</strong
+          ><small>just one step to go</small>
+        </div>
+      </section>
+      <section class="dashboard-grid">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Your activity</p>
+              <h2>Adoption requests</h2>
+            </div>
+            <a href="pets.html">Find another pet &rarr;</a>
+          </div>
+          <article class="request-row">
+            <div class="request-thumb">&#128062;</div>
+            <div class="request-info">
+              <strong>Milo</strong><span>Beagle mix &middot; Request #2184</span
+              ><small>Submitted 12 May 2024</small>
+            </div>
+            <span class="request-status pending">Under review</span>
+          </article>
+          <article class="request-row">
+            <div class="request-thumb">&#128008;</div>
+            <div class="request-info">
+              <strong>Luna</strong
+              ><span>Domestic shorthair &middot; Request #2169</span
+              ><small>Submitted 08 May 2024</small>
+            </div>
+            <span class="request-status approved">Approved</span>
+          </article>
+        </div>
+        <aside class="panel profile-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Your details</p>
+              <h2>Profile</h2>
+            </div>
+          </div>
+          <dl>
+            <div>
+              <dt>Name</dt>
+              <dd>Alex Smith</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>alex@example.com</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd>+1 555 000 0000</dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>123 Garden Street</dd>
+            </div>
+          </dl>
+          <button class="outline-button">Edit profile</button>
+        </aside>
+      </section>
+    </main>
+    <script src="../js/user-dashboard.js"></script>
+  </body>
+</html>

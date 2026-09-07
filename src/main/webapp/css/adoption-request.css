@@ -1,0 +1,97 @@
+@import url("index.css");
+.request-wrap {
+  max-width: 1050px;
+  margin: auto;
+  padding: 75px 6%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+}
+.request-intro h1 {
+  font-size: 59px;
+}
+.request-intro > p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 340px;
+}
+.selected-pet {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 15px;
+  margin-top: 36px;
+  box-shadow: var(--shadow);
+}
+.selected-pet > span {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: #d7e5df;
+  font-size: 31px;
+}
+.selected-pet > img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.selected-pet div {
+  display: grid;
+}
+.selected-pet small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.selected-pet strong {
+  font: 600 25px "Playfair Display";
+}
+.form-card {
+  background: #fff;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+.form-card label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.form-card textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid var(--line);
+  padding: 12px;
+  outline-color: var(--coral);
+}
+.check-label {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 9px !important;
+  color: var(--muted);
+  font-weight: 400 !important;
+}
+.check-label input {
+  margin-top: 4px;
+  accent-color: var(--coral);
+}
+.form-card button {
+  width: 100%;
+}
+.form-card button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+@media (max-width: 700px) {
+  .request-wrap {
+    display: block;
+    padding: 45px 6%;
+  }
+  .request-intro {
+    margin-bottom: 38px;
+  }
+  .request-intro h1 {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adoption request | PetHub</title>
+    <link rel="stylesheet" href="../css/adoption-request.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">P</span
+        ><span>Pet<span class="brand-accent">Hub</span></span></a
+      >
+      <nav class="site-nav">
+        <a href="pets.html">Back to pets</a
+        ><a class="nav-button" href="user-dashboard.html">My dashboard</a>
+      </nav>
+    </header>
+    <main class="request-wrap">
+      <div class="request-intro">
+        <p class="eyebrow">The first hello</p>
+        <h1>Tell us about<br /><em>your home.</em></h1>
+        <p>The more we know, the better we can help make a thoughtful match.</p>
+        <div class="selected-pet">
+          <span>&#128062;</span>
+          <div>
+            <small>Applying to adopt</small><strong>Milo</strong
+            ><small>Beagle mix &middot; Pet ID #1042</small>
+          </div>
+        </div>
+      </div>
+      <form id="adoption-form" class="form-card">
+        <input type="hidden" name="petId" value="1042" /><label
+          >Your name<input type="text" name="name" required /></label
+        ><label>Email address<input type="email" name="email" required /></label
+        ><label
+          >Why would you like to adopt Milo?<textarea
+            name="reason"
+            rows="6"
+            required
+          ></textarea>
+        </label>
+        <div class="two-fields">
+          <label
+            >Home type<select name="homeType" required>
+              <option value="">Choose one</option>
+              <option>Apartment</option>
+              <option>House</option>
+              <option>Farm</option>
+            </select></label
+          ><label
+            >Have other pets?<select name="otherPets" required>
+              <option value="">Choose one</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select></label
+          >
+        </div>
+        <label class="check-label"
+          ><input type="checkbox" required /> I understand that submitting a
+          request does not guarantee adoption.</label
+        ><button class="button button-primary" type="submit">
+          Send adoption request <span>&rarr;</span>
+        </button>
+        <p class="form-message" id="form-message"></p>
+      </form>
+    </main>
+    <script src="../js/adoption-request.js"></script>
+  </body>
+</html>

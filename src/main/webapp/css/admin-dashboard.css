@@ -1,0 +1,585 @@
+@import url("index.css");
+body {
+  display: flex;
+  background: #f4f5f1;
+}
+.admin-sidebar {
+  width: 230px;
+  min-height: 100vh;
+  background: var(--ink);
+  color: #fff;
+  padding: 30px 22px;
+  display: flex;
+  flex-direction: column;
+}
+.admin-sidebar .admin-brand {
+  margin-bottom: 65px;
+}
+.admin-sidebar .brand-mark {
+  background: var(--coral);
+}
+.admin-sidebar .admin-brand small {
+  color: #aab6b5;
+}
+.admin-sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+.admin-sidebar nav a {
+  padding: 12px;
+  color: #aab6b5;
+  font-size: 13px;
+}
+.admin-sidebar nav a.active,
+.admin-sidebar nav a:hover {
+  color: #fff;
+  background: #334149;
+}
+.admin-sidebar nav b {
+  float: right;
+  background: var(--coral);
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 10px;
+}
+.sidebar-logout {
+  margin-top: auto;
+  color: #aab6b5;
+  font-size: 12px;
+}
+.admin-main {
+  flex: 1;
+  padding: 48px 5%;
+  max-width: 1400px;
+}
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.admin-topbar h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 42px 0 20px;
+}
+.metric-grid > div,
+.admin-panel {
+  background: #fff;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+.metric-icon {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+}
+.metric-icon.coral,
+.quick-icon.coral {
+  background: #f7d7cc;
+}
+.metric-icon.yellow,
+.quick-icon.yellow {
+  background: #f9edc9;
+}
+.metric-icon.green {
+  background: var(--sage);
+}
+.metric-icon.blue,
+.quick-icon.blue {
+  background: var(--blue);
+}
+.metric-grid p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 15px 0 5px;
+}
+.metric-grid strong {
+  font: 700 34px "Playfair Display";
+}
+.metric-grid small {
+  display: block;
+  color: #4c7b5b;
+  font-size: 10px;
+}
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+}
+.admin-panel {
+  padding: 28px;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+th {
+  text-align: left;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+td,
+th {
+  padding: 14px 9px;
+  border-bottom: 1px solid var(--line);
+}
+td strong,
+td small {
+  display: block;
+}
+td small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.table-status {
+  padding: 5px 8px;
+  font-size: 10px;
+}
+.table-action {
+  border: 0;
+  background: none;
+  color: var(--coral);
+  font-weight: 700;
+  font-size: 11px;
+}
+.quick-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 0;
+  border-top: 1px solid var(--line);
+}
+.quick-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+.quick-action span:nth-child(2) {
+  display: grid;
+  flex: 1;
+}
+.quick-action small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.quick-action b {
+  color: var(--coral);
+}
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 180px;
+  }
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .admin-sidebar {
+    display: none;
+  }
+  .admin-main {
+    padding: 30px 5%;
+  }
+  .admin-topbar h1 {
+    font-size: 30px;
+  }
+  .metric-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .admin-panel {
+    padding: 18px;
+  }
+}
+
+/* Admin workspace */
+body {
+  min-height: 100vh;
+  color: var(--ink);
+}
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex: 0 0 248px;
+  padding: 32px 20px 24px;
+}
+.admin-sidebar .admin-brand {
+  margin-bottom: 42px;
+}
+.admin-nav a {
+  display: block;
+  border-radius: 4px;
+}
+.admin-nav a::first-letter {
+  color: var(--coral);
+}
+.sidebar-logout {
+  display: block;
+  padding: 12px;
+  border-top: 1px solid #3b484d;
+  padding-top: 22px;
+}
+.admin-main {
+  width: min(1440px, 100%);
+  padding: 46px clamp(24px, 5vw, 72px) 90px;
+}
+.admin-topbar {
+  margin-bottom: 30px;
+}
+.admin-topbar h1 {
+  color: var(--ink);
+}
+.view-site,
+.panel-title a,
+.section-heading > a {
+  color: var(--coral-dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+.metric-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 56px;
+}
+.metric-card {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px rgba(45, 56, 60, 0.14);
+}
+.metric-card strong {
+  margin-top: 10px;
+}
+.metric-card > span:last-child {
+  color: var(--muted);
+  font-size: 12px;
+}
+.admin-section {
+  scroll-margin-top: 24px;
+  margin-bottom: 64px;
+}
+.section-heading,
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+.section-heading h2,
+.panel-title h3 {
+  margin: 0;
+}
+.section-heading h2 {
+  font: 700 34px "Playfair Display";
+}
+.admin-panel {
+  border: 1px solid #e8ebe5;
+  box-shadow: 0 12px 35px rgba(45, 56, 60, 0.06);
+  border-radius: 4px;
+}
+.form-panel {
+  margin-bottom: 18px;
+  background: #fdfcf9;
+}
+.form-panel h3 {
+  margin: 0 0 20px;
+  font: 700 22px "Playfair Display";
+}
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.admin-form label,
+.compact-form input,
+.compact-form select {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+.admin-form input,
+.admin-form select,
+.admin-form textarea,
+.compact-form input,
+.inline-form input,
+.inline-form select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 11px;
+  border: 1px solid #dce2dc;
+  border-radius: 3px;
+  color: var(--ink);
+  background: #fff;
+  outline: 0;
+}
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus,
+.compact-form input:focus {
+  border-color: var(--coral);
+}
+.admin-form .wide {
+  grid-column: span 3;
+}
+.button {
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 17px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button-primary {
+  background: var(--coral);
+  color: #fff;
+}
+.table-panel {
+  padding: 24px;
+}
+.table-panel table {
+  min-width: 680px;
+}
+.status {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 3px;
+  background: var(--sage);
+  color: #4c7b5b;
+}
+.pet-thumb {
+  width: 48px;
+  height: 48px;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--sage);
+}
+.empty-thumb {
+  display: grid;
+  place-items: center;
+  color: #4c7b5b;
+  font-size: 21px;
+}
+.admin-message {
+  margin: 0 0 24px;
+  padding: 12px 15px;
+  border-left: 3px solid #4c7b5b;
+  background: var(--sage);
+  color: #355b41;
+  font-size: 13px;
+  font-weight: 600;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.actions a,
+.actions button,
+.inline-form button,
+.compact-form button {
+  border: 0;
+  background: none;
+  color: var(--coral-dark);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.actions form {
+  margin: 0;
+}
+.edit-details {
+  position: relative;
+}
+.edit-details summary {
+  color: var(--coral-dark);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+.edit-form {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 7px;
+  width: 320px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #dce2dc;
+  border-radius: 3px;
+  font:
+    11px "DM Sans",
+    sans-serif;
+}
+.edit-form textarea,
+.edit-form button {
+  grid-column: span 2;
+}
+.edit-form button {
+  padding: 9px;
+  border: 0;
+  background: var(--coral);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.split-section {
+  max-width: 100%;
+}
+.full-panel {
+  width: 100%;
+}
+.inline-form {
+  display: grid;
+  grid-template-columns: 100px minmax(100px, 1fr) auto;
+  gap: 7px;
+  align-items: center;
+}
+.inline-form input,
+.inline-form select {
+  margin: 0;
+  padding: 7px;
+  font-size: 11px;
+}
+.compact-form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) auto;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.compact-form input {
+  margin: 0;
+  font-weight: 400;
+}
+.compact-form button {
+  padding: 0 6px;
+}
+.record-list {
+  border-top: 1px solid var(--line);
+}
+.record-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.record-list span {
+  color: var(--muted);
+  text-align: right;
+}
+@media (max-width: 1100px) {
+  .metric-grid,
+  .admin-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .admin-form .wide {
+    grid-column: span 2;
+  }
+  .compact-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  body {
+    display: block;
+  }
+  .admin-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 20px;
+  }
+  .admin-sidebar .admin-brand {
+    margin-bottom: 18px;
+  }
+  .admin-nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+  }
+  .admin-nav a {
+    white-space: nowrap;
+    padding: 9px;
+  }
+  .sidebar-logout {
+    margin-top: 14px;
+  }
+  .admin-main {
+    padding: 30px 5% 60px;
+  }
+  .admin-topbar,
+  .section-heading,
+  .panel-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .metric-grid,
+  .admin-form {
+    grid-template-columns: 1fr;
+  }
+  .admin-form .wide {
+    grid-column: auto;
+  }
+  .table-panel {
+    padding: 16px;
+  }
+  .inline-form,
+  .compact-form {
+    grid-template-columns: 1fr;
+  }
+  .record-list div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .record-list span {
+    text-align: left;
+  }
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin dashboard | PetHub</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css" />
+  </head>
+  <body>
+    <aside class="admin-sidebar">
+      <div class="admin-brand">
+        <span class="brand-mark">P</span>
+        <div><strong>PetHub</strong><small>Admin console</small></div>
+      </div>
+      <nav>
+        <a class="active" href="#overview">&#9632; Overview</a
+        ><a href="#pets">&#128062; Pets</a
+        ><a href="#requests">&#9825; Requests <b>6</b></a
+        ><a href="#users">&#9673; Users</a>
+      </nav>
+      <a class="sidebar-logout" href="admin-login.html">&#8592; Sign out</a>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <p class="eyebrow">Monday, 13 May 2024</p>
+          <h1>Good morning, Jamie.</h1>
+        </div>
+        <div class="admin-user">
+          <span>JD</span><strong>Jamie Davis</strong>
+        </div>
+      </header>
+      <section id="overview" class="metric-grid">
+        <div>
+          <span class="metric-icon coral">&#128062;</span>
+          <p>Available pets</p>
+          <strong>24</strong><small>+3 this month</small>
+        </div>
+        <div>
+          <span class="metric-icon yellow">&#9825;</span>
+          <p>Open requests</p>
+          <strong>18</strong><small>6 need review</small>
+        </div>
+        <div>
+          <span class="metric-icon green">&#10003;</span>
+          <p>Successful adoptions</p>
+          <strong>86</strong><small>+12 this month</small>
+        </div>
+        <div>
+          <span class="metric-icon blue">&#9673;</span>
+          <p>Registered users</p>
+          <strong>342</strong><small>+28 this month</small>
+        </div>
+      </section>
+      <section class="content-grid">
+        <div class="admin-panel" id="requests">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Needs your attention</p>
+              <h2>Recent adoption requests</h2>
+            </div>
+            <a href="#requests">View all &rarr;</a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Applicant</th>
+                  <th>Pet</th>
+                  <th>Submitted</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Alex Smith</strong><small>alex@example.com</small>
+                  </td>
+                  <td>Milo</td>
+                  <td>Today, 09:24</td>
+                  <td><span class="table-status pending">Pending</span></td>
+                  <td><button class="table-action">Review</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Priya Nair</strong><small>priya@example.com</small>
+                  </td>
+                  <td>Bruno</td>
+                  <td>Yesterday</td>
+                  <td><span class="table-status pending">Pending</span></td>
+                  <td><button class="table-action">Review</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Sam Wilson</strong><small>sam@example.com</small>
+                  </td>
+                  <td>Luna</td>
+                  <td>12 May 2024</td>
+                  <td><span class="table-status approved">Approved</span></td>
+                  <td><button class="table-action">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="admin-panel quick-panel" id="pets">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Quick actions</p>
+              <h2>Keep things moving</h2>
+            </div>
+          </div>
+          <a class="quick-action" href="#add-pet"
+            ><span class="quick-icon coral">+</span
+            ><span
+              ><strong>Add a new pet</strong
+              ><small>Create a new profile</small></span
+            ><b>&rarr;</b></a
+          ><a class="quick-action" href="#pets"
+            ><span class="quick-icon yellow">&#128062;</span
+            ><span
+              ><strong>Manage pet profiles</strong
+              ><small>24 active profiles</small></span
+            ><b>&rarr;</b></a
+          ><a class="quick-action" href="#users"
+            ><span class="quick-icon blue">&#9673;</span
+            ><span
+              ><strong>View all users</strong
+              ><small>342 registered users</small></span
+            ><b>&rarr;</b></a
+          >
+        </aside>
+      </section>
+    </main>
+    <script src="../js/admin-dashboard.js"></script>
+  </body>
+</html>

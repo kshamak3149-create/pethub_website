@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | PetHub</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">P</span
+        ><span>Pet<span class="brand-accent">Hub</span></span></a
+      >
+      <section class="auth-panel">
+        <p class="eyebrow">Welcome back</p>
+        <h1>Good to see<br /><em>you again.</em></h1>
+        <p class="auth-intro">Sign in to follow your adoption journey.</p>
+        <form id="login-form" class="form-card">
+          <label
+            >Email address<input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required /></label
+          ><label
+            >Password<input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+          /></label>
+          <div class="form-row">
+            <label class="check-label"
+              ><input type="checkbox" /> Remember me</label
+            ><a href="#">Forgot password?</a>
+          </div>
+          <button class="button button-primary" type="submit">
+            Sign in <span>&rarr;</span>
+          </button>
+          <p class="form-message" id="form-message"></p>
+          <p class="auth-switch">
+            New to PetHub? <a href="register.html">Create an account</a>
+          </p>
+        </form>
+      </section>
+      <div class="auth-art">
+        <span>&#128062;</span>
+        <p>Find the connection<br />that feels like home.</p>
+      </div>
+    </main>
+    <script src="../js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a pet | PetHub</title>
+    <link rel="stylesheet" href="../css/pets.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">P</span
+        ><span>Pet<span class="brand-accent">Hub</span></span></a
+      ><button class="menu-toggle">&#9776;</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a
+        ><a class="active" href="pets.html">Find a pet</a
+        ><a href="user-dashboard.html">My dashboard</a
+        ><a class="nav-button" href="login.html">Sign in</a>
+      </nav>
+    </header>
+    <main class="page-wrap">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">The PetHub collection</p>
+          <h1>Find your <em>match.</em></h1>
+          <p>
+            Every profile is a new little possibility. Filter by what feels
+            right for your home.
+          </p>
+        </div>
+        <div class="result-count">
+          <strong>24</strong><span>pets waiting<br />to be met</span>
+        </div>
+      </section>
+      <section class="filter-bar">
+        <label class="search-field"
+          ><span>&#9906;</span
+          ><input
+            id="pet-search"
+            type="search"
+            placeholder="Search by name or breed" /></label
+        ><select id="species-filter">
+          <option value="">All species</option>
+          <option>Dog</option>
+          <option>Cat</option>
+          <option>Rabbit</option></select
+        ><select id="size-filter">
+          <option value="">Any size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option></select
+        ><button id="clear-filters">Clear</button>
+      </section>
+      <section class="pet-grid" id="pet-grid">
+        <article
+          class="pet-card"
+          data-name="milo"
+          data-breed="beagle"
+          data-species="Dog"
+          data-size="Medium"
+        >
+          <div class="pet-image image-milo">
+            <span>&#128062;</span><small>image coming soon</small
+            ><b>Available</b>
+          </div>
+          <div class="pet-card-body">
+            <div class="pet-title">
+              <div>
+                <h2>Milo</h2>
+                <p>Beagle mix</p>
+              </div>
+              <span class="heart-button">&#9825;</span>
+            </div>
+            <div class="pet-meta">
+              <span>Dog</span><span>3 years</span><span>Medium</span>
+            </div>
+            <a class="card-link" href="pet-details.html"
+              >View Milo's story &rarr;</a
+            >
+          </div>
+        </article>
+        <article
+          class="pet-card"
+          data-name="luna"
+          data-breed="domestic shorthair"
+          data-species="Cat"
+          data-size="Small"
+        >
+          <div class="pet-image image-luna">
+            <span>&#128008;</span><small>image coming soon</small
+            ><b>Available</b>
+          </div>
+          <div class="pet-card-body">
+            <div class="pet-title">
+              <div>
+                <h2>Luna</h2>
+                <p>Domestic shorthair</p>
+              </div>
+              <span class="heart-button">&#9825;</span>
+            </div>
+            <div class="pet-meta">
+              <span>Cat</span><span>2 years</span><span>Small</span>
+            </div>
+            <a class="card-link" href="pet-details.html"
+              >View Luna's story &rarr;</a
+            >
+          </div>
+        </article>
+        <article
+          class="pet-card"
+          data-name="bruno"
+          data-breed="labrador"
+          data-species="Dog"
+          data-size="Large"
+        >
+          <div class="pet-image image-bruno">
+            <span>&#128062;</span><small>image coming soon</small
+            ><b>Available</b>
+          </div>
+          <div class="pet-card-body">
+            <div class="pet-title">
+              <div>
+                <h2>Bruno</h2>
+                <p>Labrador retriever</p>
+              </div>
+              <span class="heart-button">&#9825;</span>
+            </div>
+            <div class="pet-meta">
+              <span>Dog</span><span>5 years</span><span>Large</span>
+            </div>
+            <a class="card-link" href="pet-details.html"
+              >View Bruno's story &rarr;</a
+            >
+          </div>
+        </article>
+        <article
+          class="pet-card"
+          data-name="pepper"
+          data-breed="rabbit"
+          data-species="Rabbit"
+          data-size="Small"
+        >
+          <div class="pet-image image-pepper">
+            <span>&#128007;</span><small>image coming soon</small
+            ><b>Available</b>
+          </div>
+          <div class="pet-card-body">
+            <div class="pet-title">
+              <div>
+                <h2>Pepper</h2>
+                <p>Mini lop rabbit</p>
+              </div>
+              <span class="heart-button">&#9825;</span>
+            </div>
+            <div class="pet-meta">
+              <span>Rabbit</span><span>1 year</span><span>Small</span>
+            </div>
+            <a class="card-link" href="pet-details.html"
+              >View Pepper's story &rarr;</a
+            >
+          </div>
+        </article>
+      </section>
+      <p class="empty-state" id="empty-state">
+        No pets match those filters yet.
+      </p>
+    </main>
+    <script src="../js/pets.js"></script>
+  </body>
+</html>
